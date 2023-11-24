@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="utf-8">
+      <meta name="keywords" content="Desarrollo de Habilidades con Katas">
+      <meta name="description" content="">
+      <title>Proyecto Grupo</title>
+      <link rel="stylesheet" href="styles.css" media="screen">
+  </head>
+  <header>
+    <img id= "logo" src="media/LOGO.jpg" alt="" width="180" height="180">
+    <h1><i>Desarrollo de Habilidades con Katas</i></h1> 
+    <form action="/" id="form_buscar">
+      <select name="tipo_busqueda" id="tipo_busqueda">
+        <option value="nombre">Por Nombre</option>
+        <option value="descripcion">Por Descripcion</option>
+        <option value="dificultad">Por Dificultad</option>
+      </select>
+      <input type="text" id="busqueda" placeholder="Buscar katas">
+      <button id="btn_busqueda" type="submit">Buscar</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <select name="dificultad" id="dificultadBusqueda">
+        <option value="facil">Fácil</option>
+        <option value="media">Media</option>
+        <option value="dificil">Difícil</option>
+      </select>
+    </form>
+  </header>
+  <body>
+    <center>
+      <button type="button" id="btn_crearcurso">Crear Curso</button>
+    </center>
+    <div id="overlay-Curso">
+      <div class="popup">
+        <h2>Cree su propio curso</h2>
+        <input type="text" id="nombreCurso">&nbsp;
+        <button type="submit" id="bt_AceptCurso">Crear</button>
+        <button type="button" id="bt_cancelCurso">Cancelar</button>
+      </div>
+    </div>
+
+    <center>
+      <aside id="menu-cursos">
+        <h3><i>Cursos disponibles:</i></h3> <br>
+        
+      </aside>
+    </center>
+    <div id="overlay-inscribirse">
+      <div class="popup">
+        <h2>¿Quieres inscribirte a <span id="cursoPopup"></span>?</h2>
+        <button type="button" id="bt_AceptInscripcion">Aceptar</button>
+        <button type="button" id="bt_cancelInscripcion">Cancelar</button>
+      </div>
+    </div>
+
+    <h2><i>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Katas Disponibles:</i></h2>
+    <center>
+    <div id="katas-disponibles">
+  
+    </div>
+    </center>
+    <h2 id="mostrar-formulario">Añadir Kata</h2>
+    <form id="form_añadir" style="display: none;">
+        <input type="text" id="nombre-kata" placeholder="Nombre de la Kata">
+        <input type="text" id="descripcion-kata" placeholder="Descripción de la Kata">
+        <select name="dificultad" id="dificultad">
+            <option value="Fácil">Fácil</option>
+            <option value="Media">Media</option>
+            <option value="Difícil">Difícil</option>
+        </select>
+        <button type="submit">Añadir Kata</button>
+    </form>
+    <hr>
+    <center>
+    <h3>Ingreso de usuario en TDD Labs:</h3>
+    <button type="button" id="botonRegistro">Registrarse</button>
+    <button type="button" id="botonIniciarSesion">Iniciar sesión</button>
+    <button type="button" id="botonCerrarSesion">Cerrar sesión</button><br><br><br>
+    <span id="resultadosUs"></span><br><br>
+    </center>
+    <h3>Usuarios registrados en TDD Labs:</h3>
+    <div id="mostrarUsuarios"></div>
+    <div id="overlay-Registro">
+      <div class="popup">
+        <h2>Ingrese su nombre completo y elija la opcion de registro:</h2>
+        <input type="text" id="nombreReg">
+        <select name="tipo" id="tipoReg">
+          <option value="Estudiante">Estudiante</option>
+          <option value="Docente">Docente</option>
+        </select> 
+        <h2>Ingrese tu contraseña y confirma la contraseña:</h2>  
+        <input type="password" id="contraReg"> &nbsp; <br><br>
+        <input type="password" id="confirmarContra">
+        <br><br>
+        <button type="button" id="salir-Reg">Cancelar</button>
+        <button  type="button" id="guardar-Reg">Guardar</button>
+    </div>
+    </div>
+    <div id="overlay-Inicio">
+      <div class="popup">
+          <h2>Inicie sesion con su nombre completo y contraseña:</h2>
+          <input type="text" id="nombreIn">&nbsp; <br><br>
+          <input type="password" id="contraIn">
+          <br><br>
+          <button type="button" id="salir-In">Cancelar</button>
+          <button  type="submit" id="Inicio-Sesion">Iniciar Sesion</button>
+      </div>
+    </div>
+  </body>
+  <script type="module" src="./src/presenter.js"></script>
+  <footer>
+      <hr>
+      <span class="der">Nombres de los participantes del proyecto: &nbsp;<br><br>- Jhulians Rubens Garcia Hinojosa<br>- Luis Antonio Menacho Torrez<br>- Juan Pablo Montoya Jiménez<br>- Carlos Javier Sejas Pareja </span>
+      <p>&nbsp;Ingenieria de Software - Proyecto Grupo<br><br><br>
+      &nbsp;Cochabamba - Bolivia 2023</p>
+  </footer>
+</html>
